@@ -1,3 +1,5 @@
+import pandas as pd 
+from genetic import AlgorithmeGenetiqueTSP
 import pandas as pd
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
@@ -119,3 +121,14 @@ chemin = christofides(villes)
 
 # On affiche la seconde carte avec le chemin optimisé
 afficher_carte_christofides(df, villes, chemin)
+df = pd.read_csv('Docs/villes_france_lat_long.csv', sep=',').head(20)
+algorithme = AlgorithmeGenetiqueTSP(
+    population_size=700,        
+    selection_type='roulette_wheel', # Type de sélection ('roulette_wheel', 'tournament', etc.)
+    reproduction_type='pmx',    # Type de croisement ('order' ou 'pmx')
+    mutation_rate=0.02,         
+    generations=500             
+)
+meilleur_chemin = algorithme.genetic_algorithm(df)
+print("Meilleur chemin trouvé :", meilleur_chemin)
+print("Distance totale :", algorithme.calculer_distance(meilleur_chemin, df))
