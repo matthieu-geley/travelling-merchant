@@ -88,5 +88,29 @@ L'algorithme de Christofides est une solution efficace et presque optimale pour 
 ## 4. Algorithme génétique
 
 ## 5. Analyse comparative
+L'analyse comparative des deux méthodes de résolution du TSP, l'algorithme de Christofides et les algorithmes génétiques, permet de mettre en lumière les forces et les faiblesses de chaque approche.
+
+Les algorithmes génétiques sont des approches évolutives basées sur des concepts de sélection naturelle et de mutation. Ils permettent d'explorer un espace de solutions plus large et de trouver des solutions potentiellement meilleures que les méthodes déterministes. Les algorithmes génétiques sont particulièrement adaptés pour des problèmes complexes et non linéaires, où la recherche d'une solution optimale est difficile. Dans le contexte du TSP, les algorithmes génétiques offrent une approche flexible et robuste pour trouver des solutions de qualité, même si elles ne sont pas garanties d'être optimales.
+
+L'algorithme de Christofides, quand à lui, est une méthode d'approximation garantissant une solution à 1,5 fois de la longueur de la solution optimale. Il est particulièrement adapté pour des problèmes de taille moyenne à grande, où la recherche d'une solution exacte serait trop coûteuse en termes de calcul. Cet algorithme est rapide et efficace, offrant une solution de qualité proche de l'optimum tout en optimisant le temps de calcul. Dans le contexte de la cartographie des villes pour Théobald, l'algorithme de Christofides permet de minimiser les distances parcourues tout en réduisant les risques liés à des trajets prolongés.
+
+En comparant les deux approches, on constate que les algorithmes génétiques sont plus complexes à mettre en œuvre et nécessitent un réglage fin des paramètres pour obtenir des résultats optimaux.
+L'algorithme de Christofides, en revanche, est plus simple et plus rapide à exécuter, tout en garantissant une solution de qualité proche de l'optimum.
+
+Voici un petit tableau comparatif des deux méthodes:
+
+#### Algorithmes de Christofides
+| Avantages | Inconvénients |
+| --- | --- |
+| - Garantie d'approximation à 1,5 fois de la solution optimale | - Solution approchée |
+| - temps et ressources de calcul faibles | |
+------------
+
+#### Algorithmes génétiques
+| Avantages | Inconvénients |
+| --- | --- |
+| - Adaptabilité à des problèmes complexes | - Complexité de mise en œuvre et de réglage des paramètres |
+| | - temps et ressources de calcul élevés |
+------------
 
 ## 6. Conclusion
