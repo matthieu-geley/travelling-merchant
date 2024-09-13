@@ -107,6 +107,7 @@ def afficher_carte_christofides(df, villes, chemin):
 
     plt.title(f"Chemin trouvé par l'algorithme de Christofides\nDistance totale: {total_distance:.2f} km")
     plt.show()
+    
 def afficher_carte_genetic(df, villes, chemin):
         fig = plt.figure(figsize=(10, 5))
         ax = plt.axes(projection=ccrs.Orthographic(central_longitude=0, central_latitude=45))
