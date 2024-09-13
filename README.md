@@ -23,6 +23,7 @@ Pour ce projet nous avons travaillé à trois en suivant le plan suivant:
 - 2) Résolution avec l'algorithme de Christofides
 - 3) Résolution avec les algorithmes génétiques
 - 4) Analyse comparative
+
 - 5) Conclusion  
 
 C'est ce même plan que vous retrouverez dans ce Readme.  
@@ -118,6 +119,7 @@ Dans nos tests, l'algorithme génétique a produit des itinéraires de 5000 à 6
 ### 4.4 Visualisation
 
 Pour voir les résultats de manière plus concrète, nous avons utilisé **Cartopy** pour tracer les itinéraires sur une carte de la France. Chaque ville est représentée par un point rouge, et les itinéraires trouvés sont tracés entre elles. Les distances parcourues sont également affichées, ce qui nous permet de visualiser comment l'algorithme génétique optimise progressivement le trajet.
+<img width="412" alt="Représentation graphique" src="https://github.com/user-attachments/assets/0ec0d525-aef6-4a02-bdad-ad2222602dbd">
 
 ### Conclusion
 
