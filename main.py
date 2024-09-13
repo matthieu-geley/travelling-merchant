@@ -62,6 +62,7 @@ def afficher_carte_villes(df):
     plt.title("Carte des villes françaises avec distances")
     plt.show()
 
+
 """
 Fonction qui nous permet d'afficher la carte avec le chemin trouvé par l'algorithme de Christofides
 1. On crée la carte avec projection orthocentrée sur la France
@@ -122,6 +123,7 @@ chemin = christofides(villes)
 # On affiche la seconde carte avec le chemin optimisé
 afficher_carte_christofides(df, villes, chemin)
 df = pd.read_csv('Docs/villes_france_lat_long.csv', sep=',').head(20)
+
 algorithme = AlgorithmeGenetiqueTSP(
     population_size=700,        
     selection_type='roulette_wheel', # Type de sélection ('roulette_wheel', 'tournament', etc.)
