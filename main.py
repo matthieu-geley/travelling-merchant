@@ -160,14 +160,16 @@ afficher_carte_christofides(df, villes, chemin)
 df = pd.read_csv('Docs/villes_france_lat_long.csv', sep=',').head(20)
 algorithme = AlgorithmeGenetiqueTSP(
     population_size=100,        
-    selection_type='roulette_wheel', # Type de sélection ('roulette_wheel', 'tournament', etc.)
-    reproduction_type='pmx',    # Type de croisement ('order' ou 'pmx')
-    mutation_rate=0.02,         
+    selection_type='tournament', # Type de sélection ('roulette_wheel', 'tournament', etc.)
+    reproduction_type='order',    # Type de croisement ('order' ou 'pmx')
+    mutation_rate=0.05,         
     generations=100          
 )
-meilleur_chemin = algorithme.genetic_algorithm(df)
+distances_precalc = algorithme.precalculate_distances(df)
+
+meilleur_chemin = algorithme.genetic_algorithm(df, distances_precalc)
 print("Meilleur chemin trouvé :", meilleur_chemin)
-print("Distance totale :", algorithme.calculer_distance(meilleur_chemin, df))
+print("Distance totale :", algorithme.calculate_distance(meilleur_chemin, distances_precalc))
 
 # Afficher la carte avec le meilleur chemin trouvé par l'algorithme génétique
 afficher_carte_genetic(df, villes, meilleur_chemin)

@@ -85,7 +85,43 @@ Puis, en suivant les étapes vues dans la partie 3 de ce Readme, l'algorithme de
 ### 3.5 Conclusion
 L'algorithme de Christofides est une solution efficace et presque optimale pour résoudre le TSP dans un contexte de cartographie, où il est crucial de minimiser les distances parcourues tout en maintenant un temps de calcul raisonnable. Sa combinaison de précision et de rapidité en fait un choix pertinent pour des applications telles que la planification des itinéraires commerciaux de Théobald.  
 
-## 4. Algorithme génétique
+## 4. Algorithme Génétique
+
+L'algorithme génétique (AG) est une méthode inspirée de la nature, plus précisément de l'évolution. Il fonctionne un peu comme la sélection naturelle : on commence avec un ensemble de solutions (des itinéraires) et, au fil du temps, on garde les meilleures tout en les combinant et en les modifiant un peu pour améliorer les résultats. Cet algorithme est très utile pour résoudre des problèmes complexes comme le Problème du Voyageur de Commerce (TSP), surtout quand on ne peut pas calculer la solution exacte de manière rapide.
+
+### 4.1 Introduction
+
+Dans notre projet, on a utilisé un algorithme génétique pour résoudre le TSP. L'idée était de tester une approche qui simule l'évolution, où les itinéraires s'améliorent au fur et à mesure des générations. Même si on ne trouve pas toujours le chemin le plus optimal, l'algorithme génétique permet de s'en approcher, tout en étant assez flexible.
+
+### 4.2 Détails de l'implémentation
+
+Notre algorithme génétique fonctionne en plusieurs étapes :
+
+- **Initialisation** : On commence par créer une population d'itinéraires aléatoires. Chaque itinéraire représente une façon de visiter toutes les villes. Plus la population est grande, plus on a de chances de trouver un bon itinéraire.
+  
+- **Évaluation** : Chaque itinéraire est évalué à l'aide d'une fonction appelée "fitness". Cette fonction est basée sur la distance totale : plus le chemin est court, plus la fitness est élevée. L'objectif est donc de maximiser cette fitness.
+
+- **Sélection** : On sélectionne les itinéraires les plus performants pour les croiser entre eux. On utilise des techniques comme la roulette ou le tournoi pour choisir les meilleurs itinéraires, tout en gardant un peu de hasard pour éviter de rester bloqué sur une mauvaise solution.
+
+- **Croisement** : Les itinéraires sélectionnés se croisent pour créer de nouveaux itinéraires. On a utilisé deux types de croisements : le croisement d'ordre (Order Crossover) et le PMX (Partially Mapped Crossover). Ces croisements permettent de combiner deux itinéraires et d'en créer un nouveau, qui espérons-le, sera meilleur.
+
+- **Mutation** : Pour éviter que l'algorithme se retrouve coincé avec des itinéraires qui ne s'améliorent plus, on introduit de temps en temps des mutations. Cela consiste à échanger deux villes dans un itinéraire, histoire de garder un peu de diversité dans les solutions.
+
+- **Itérations** : Ce processus de sélection, croisement et mutation est répété sur plusieurs générations. L'idée est d'améliorer les itinéraires au fil du temps jusqu'à ce qu'on arrive à un bon résultat ou qu'on atteigne un nombre maximum de générations.
+
+### 4.3 Résultats et optimisation
+
+L'un des avantages des algorithmes génétiques, c'est qu'ils sont très flexibles, mais ils peuvent aussi être imprévisibles. Dans notre projet, après plusieurs générations, l'algorithme génétique a trouvé des itinéraires assez bons, mais les résultats peuvent varier à chaque exécution, car il y a une part de hasard dans le processus. Contrairement à l'algorithme de Christofides, qui garantit une solution proche de l'optimum, les résultats de l'algorithme génétique dépendent des paramètres choisis (comme la taille de la population ou le taux de mutation).
+
+Dans nos tests, l'algorithme génétique a produit des itinéraires de 5000 à 6300 km environ. Bien que ce soit un peu plus long que l'algorithme de Christofides, avec les bons réglages, il est possible de se rapprocher de la solution optimale.
+
+### 4.4 Visualisation
+
+Pour voir les résultats de manière plus concrète, nous avons utilisé **Cartopy** pour tracer les itinéraires sur une carte de la France. Chaque ville est représentée par un point rouge, et les itinéraires trouvés sont tracés entre elles. Les distances parcourues sont également affichées, ce qui nous permet de visualiser comment l'algorithme génétique optimise progressivement le trajet.
+
+### Conclusion
+
+L'algorithme génétique est une approche intéressante et flexible pour résoudre le TSP. Même s'il ne garantit pas toujours de trouver la meilleure solution possible, il permet d'explorer un grand nombre de solutions et de les améliorer génération après génération. En ajustant bien les paramètres, on peut obtenir des résultats très proches de l'optimum. Cela en fait une méthode puissante pour résoudre des problèmes complexes comme celui du voyageur de commerce.
 
 ## 5. Analyse comparative
 L'analyse comparative des deux méthodes de résolution du TSP, l'algorithme de Christofides et les algorithmes génétiques, permet de mettre en lumière les forces et les faiblesses de chaque approche.

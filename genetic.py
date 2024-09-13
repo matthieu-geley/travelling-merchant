@@ -47,20 +47,49 @@ class AlgorithmeGenetiqueTSP:
         # Distance en kilomètres
         distance = R * c
         return distance
-    
-    def calculer_distance(self, way, df):
+    def precalculate_distances(self, df):
+        distances = {}
+        villes = df['Ville'].tolist()  # Liste des villes
+        
+        # Boucle pour précalculer les distances entre chaque paire de villes
+        for i, ville1 in enumerate(villes):
+            for j, ville2 in enumerate(villes):
+                if i != j:
+                    lat1, lon1 = df.loc[df['Ville'] == ville1, ['Latitude', 'Longitude']].values[0]
+                    lat2, lon2 = df.loc[df['Ville'] == ville2, ['Latitude', 'Longitude']].values[0]
+                    distance = self.haversine(lon1, lat1, lon2, lat2)
+                    
+                    # Ajouter les distances dans les deux sens
+                    distances[(ville1, ville2)] = distance
+                    distances[(ville2, ville1)] = distance
+        
+        return distances
+
+
+    def calculate_distance(self, way, distances):
         distance = 0
-        #coordonnées des villes directement depuis le DataFrame
+        # On parcourt chaque paire de villes dans le chemin
         for i in range(len(way) - 1):
             city1 = way[i]
             city2 = way[i + 1]
-            lat1, lon1 = df.loc[df['Ville'] == city1, ['Latitude', 'Longitude']].values[0]
-            lat2, lon2 = df.loc[df['Ville'] == city2, ['Latitude', 'Longitude']].values[0]
-            distance += self.haversine(lon1, lat1, lon2, lat2)
+            distance += distances[(city1, city2)]  # Utilisation des distances précalculées
+            # Ajouter la distance du dernier point au point de départ
+        distance += distances[(way[-1], way[0])]
         return distance
 
-    def fitness(self, way, cities):
-        return 1 / self.calculer_distance(way, cities)
+
+    def fitness(self, way, distances, cached_fitnesses):
+        # Si la fitness de ce chemin est déjà dans le cache, on la retourne
+        if tuple(way) in cached_fitnesses:
+            return cached_fitnesses[tuple(way)]
+        
+        # Sinon, on calcule la distance et la fitness
+        distance = self.calculate_distance(way, distances)
+        fitness_value = 1 / distance
+        cached_fitnesses[tuple(way)] = fitness_value  # On ajoute la fitness dans le cache
+        
+        return fitness_value
+
     
     def selection_type_selection(self, population, fitnesses):
         if self.selection_type == 'roulette_wheel':
@@ -169,16 +198,19 @@ class AlgorithmeGenetiqueTSP:
             child[i], child[j] = child[j], child[i]
         return child
 
-    def genetic_algorithm(self, cities):
+    def genetic_algorithm(self, cities, distances):
         self.initiate_population(cities)
         if len(self.population) < self.population_size:
             raise ValueError(f"Population trop petite après initialisation: {len(self.population)}")
+        
+        cached_fitnesses = {}  # Cache pour stocker les fitness des chemins déjà calculés
+        fitnesses = [self.fitness(way, distances, cached_fitnesses) for way in self.population]
 
-        mutation_interval = 10  # Nombre de générations avant de muter 
+        mutation_interval = 50  # Nombre de générations avant de muter 
         for generation in range(self.generations):
             new_population = []
-            fitnesses = [self.fitness(way, cities) for way in self.population]
-            
+            fitnesses = [self.fitness(way, distances, cached_fitnesses) for way in self.population]
+        
             if len(fitnesses) < self.population_size:
                 raise ValueError(f"Le nombre de fitnesses ({len(fitnesses)}) est inférieur à la taille de la population ({self.population_size})") 
             
@@ -204,7 +236,7 @@ class AlgorithmeGenetiqueTSP:
             self.population = new_population
 
             # On retourne le meilleur chemin
-            best_way = max(self.population, key=lambda x: self.fitness(x, cities))
+            best_way = max(self.population, key=lambda x:  self.fitness(x, distances, cached_fitnesses))
 
         return best_way
     def remove_duplicates(self,child, parent):
