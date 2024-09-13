@@ -158,3 +158,16 @@ Voici un petit tableau comparatif des deux méthodes:
 ------------
 
 ## 6. Conclusion
+En conclusion, après utilisation des deux alogirthmes - Christofides & Génétique - nous pouvons en conclure que l'utilisation de l'algorithme de Christofides est le plus approprié dans ce cas d'usage afin d'essayer de résoudre le problème TSP.  
+
+Pour en arriver a cette conclusion, nous nous sommes basés sur deux paramètres: 
+- Le résultat  
+- L'efficacité de l'algorithme  
+
+L'algorithme de Christofides a l'avantage sur ces deux paramètres là.  
+
+En effet, en terme de résultat, l'algorithme de Christofides nous donne un chemin optimisé de 3556 Km là où l'algorithme génétique varie entre 5000 et 6300 Km pour le chemin le plus optimisé après n génération.  
+
+En terme d'efficacité d'algorithme, l'algorithme génétique est beaucoup plus lourd et donc plus long a exécuter (insérer temps d'exécution) et fait aussi beaucoup plus d'appel de fonctions (insérer nombre de fonction).  
+
+Nous pouvons donc imaginer que si Théobald veut un itinéraire optimisé rapidement, il devrait utiliser l'algorithme de Christofides afin de générer son chemin. En revanche, s'il veut optimiser son parcours dans le temps, une méthode consisterait a se servir de l'algorithme de Christofides pour avoir un chemin optimisé de suite puis, de génération en génération via l'algorithme génétique, d'améliorer ce chemin afin d'essayer de faire mieux que Christofides. 

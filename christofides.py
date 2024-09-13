@@ -2,6 +2,8 @@ import networkx as nx
 from itertools import combinations
 from math import sqrt
 
+
+
 """ 
 Dans un premier temps on calcule la distance Euclidienne entre deux points.
 """
@@ -51,3 +53,4 @@ def christofides(villes):
             hamiltonian_path.append(u)
 
     return hamiltonian_path
+
