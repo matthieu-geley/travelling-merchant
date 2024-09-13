@@ -107,7 +107,43 @@ def afficher_carte_christofides(df, villes, chemin):
 
     plt.title(f"Chemin trouvé par l'algorithme de Christofides\nDistance totale: {total_distance:.2f} km")
     plt.show()
+def afficher_carte_genetic(df, villes, chemin):
+        fig = plt.figure(figsize=(10, 5))
+        ax = plt.axes(projection=ccrs.Orthographic(central_longitude=0, central_latitude=45))
+        ax.add_feature(cfeature.COASTLINE)
+        ax.add_feature(cfeature.BORDERS)
+        
+        plt.scatter(df['Longitude'], df['Latitude'], color='red', transform=ccrs.PlateCarree())
+        
+        total_distance = 0
+        for i in range(len(chemin) - 1):
+            ville1 = chemin[i]
+            ville2 = chemin[i + 1]
+            lon1, lat1 = villes[ville1]
+            lon2, lat2 = villes[ville2]
+            
+            distance = haversine(lon1, lat1, lon2, lat2)
+            total_distance += distance
+            plt.plot([lon1, lon2], [lat1, lat2], color='blue', linewidth=0.5, transform=ccrs.PlateCarree())
+            
+            lon_mid = (lon1 + lon2) / 2
+            lat_mid = (lat1 + lat2) / 2
+            plt.text(lon_mid, lat_mid, f'{distance:.0f} km', color='black', fontsize=6, ha='center', transform=ccrs.PlateCarree())
+        
+        # Ajouter la ligne pour retourner au point de départ
+        ville1 = chemin[-1]
+        ville2 = chemin[0]
+        lon1, lat1 = villes[ville1]
+        lon2, lat2 = villes[ville2]
+        distance = haversine(lon1, lat1, lon2, lat2)
+        total_distance += distance
+        plt.plot([lon1, lon2], [lat1, lat2], color='blue', linewidth=0.5, transform=ccrs.PlateCarree())
+        lon_mid = (lon1 + lon2) / 2
+        lat_mid = (lat1 + lat2) / 2
+        plt.text(lon_mid, lat_mid, f'{distance:.0f} km', color='black', fontsize=6, ha='center', transform=ccrs.PlateCarree())
 
+        plt.title(f"Chemin trouvé par l'algorithme génétique\nDistance totale: {total_distance:.2f} km")
+        plt.show()
 # On charge les données
 df = pd.read_csv('./Docs/villes_france_lat_long.csv', sep=',').head(20)
 
@@ -125,12 +161,15 @@ afficher_carte_christofides(df, villes, chemin)
 df = pd.read_csv('Docs/villes_france_lat_long.csv', sep=',').head(20)
 
 algorithme = AlgorithmeGenetiqueTSP(
-    population_size=700,        
+    population_size=100,        
     selection_type='roulette_wheel', # Type de sélection ('roulette_wheel', 'tournament', etc.)
     reproduction_type='pmx',    # Type de croisement ('order' ou 'pmx')
     mutation_rate=0.02,         
-    generations=500             
+    generations=100          
 )
 meilleur_chemin = algorithme.genetic_algorithm(df)
 print("Meilleur chemin trouvé :", meilleur_chemin)
 print("Distance totale :", algorithme.calculer_distance(meilleur_chemin, df))
+
+# Afficher la carte avec le meilleur chemin trouvé par l'algorithme génétique
+afficher_carte_genetic(df, villes, meilleur_chemin)

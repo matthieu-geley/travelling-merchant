@@ -92,7 +92,15 @@ L'analyse comparative des deux méthodes de résolution du TSP, l'algorithme de 
 
 Les algorithmes génétiques sont des approches évolutives basées sur des concepts de sélection naturelle et de mutation. Ils permettent d'explorer un espace de solutions plus large et de trouver des solutions potentiellement meilleures que les méthodes déterministes. Les algorithmes génétiques sont particulièrement adaptés pour des problèmes complexes et non linéaires, où la recherche d'une solution optimale est difficile. Dans le contexte du TSP, les algorithmes génétiques offrent une approche flexible et robuste pour trouver des solutions de qualité, même si elles ne sont pas garanties d'être optimales.
 
+L'algorithmes génétique donne une distance total de 5969.24 km.
+Cette distance peut varier car les algorithmes génétiques sont stochastiques et peuvent donner des résultats différents à chaque exécution.
+Le temps d'éxécution peut varier en fonction des paramètres choisis et dans notre cas dépasse les 2 minutes.
+
 L'algorithme de Christofides, quand à lui, est une méthode d'approximation garantissant une solution à 1,5 fois de la longueur de la solution optimale. Il est particulièrement adapté pour des problèmes de taille moyenne à grande, où la recherche d'une solution exacte serait trop coûteuse en termes de calcul. Cet algorithme est rapide et efficace, offrant une solution de qualité proche de l'optimum tout en optimisant le temps de calcul. Dans le contexte de la cartographie des villes pour Théobald, l'algorithme de Christofides permet de minimiser les distances parcourues tout en réduisant les risques liés à des trajets prolongés.
+
+L'algorithme de Christofides donne une distance total de 3559.06 km.
+Cette distance est toujours la même car l'algorithme de Christofides est déterministe.
+Le temps d'éxécution est très rapide et ne dépasse pas 10 secondes.
 
 En comparant les deux approches, on constate que les algorithmes génétiques sont plus complexes à mettre en œuvre et nécessitent un réglage fin des paramètres pour obtenir des résultats optimaux.
 L'algorithme de Christofides, en revanche, est plus simple et plus rapide à exécuter, tout en garantissant une solution de qualité proche de l'optimum.

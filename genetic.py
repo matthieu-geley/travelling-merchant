@@ -1,5 +1,8 @@
 import random
 from math import radians, sin, cos, sqrt, atan2
+import matplotlib.pyplot as plt
+import networkx as nx
+
 class AlgorithmeGenetiqueTSP:
     def __init__(self, population_size, selection_type, reproduction_type, mutation_rate, generations):
     
@@ -56,36 +59,6 @@ class AlgorithmeGenetiqueTSP:
             distance += self.haversine(lon1, lat1, lon2, lat2)
         return distance
 
-    def genetic_algorithm(self, cities):
-        
-        self.initiate_population(cities)
-        if len(self.population) < self.population_size:
-            raise ValueError(f"Population trop petite après initialisation: {len(self.population)}")
-
-        for generation in range(self.generations):
-            new_population = []
-
-            fitnesses = [self.fitness(way, cities) for way in self.population]
-            if len(fitnesses) < self.population_size:
-                raise ValueError(f"Le nombre de fitnesses ({len(fitnesses)}) est inférieur à la taille de la population ({self.population_size})") 
-            
-            while len(new_population) < self.population_size:
-                parent1, parent2 = self.selection_type_selection(self.population, fitnesses)
-
-                child1 = self.crossover(parent1, parent2)
-
-                child1 = self.mutation(child1)
-
-                new_population.append(child1)
-            if len(new_population) != self.population_size:
-                raise ValueError(f"Nouvelle population trop petite après la génération {generation}: {len(new_population)}")
-
-            # On remplace l'ancienne population par la nouvelle
-            self.population = new_population
-
-            # On retourne le meilleur chemin
-            best_way = max(self.population, key=lambda x: self.fitness(x, cities))
-            return best_way
     def fitness(self, way, cities):
         return 1 / self.calculer_distance(way, cities)
     
@@ -144,30 +117,105 @@ class AlgorithmeGenetiqueTSP:
     def order_crossover(self, parent1, parent2):
         child = [-1] * len(parent1)
         start, end = sorted(random.sample(range(len(parent1)), 2))
+        
+        # Copier la sous-séquence de parent1 dans l'enfant
         child[start:end] = parent1[start:end]
+
+        # Remplir les positions vides avec les éléments de parent2
         remaining = [x for x in parent2 if x not in child]
-        child[:start] = [x for x in remaining[:start] if x != -1]
-        child[end:] = [x for x in remaining[start:] if x != -1]
+        current_pos = 0
+
+        for i in range(start):
+            child[i] = remaining[current_pos]
+            current_pos += 1
+
+        for i in range(end, len(parent1)):
+            child[i] = remaining[current_pos]
+            current_pos += 1
+
+        child = self.remove_duplicates(child, parent1)
+
         return child
+
     
     def pmx_crossover(self, parent1, parent2):
         child = [-1] * len(parent1)
         start, end = sorted(random.sample(range(len(parent1)), 2))
+
+        # Copier la sous-séquence de parent1 dans l'enfant
         child[start:end] = parent1[start:end]
+
+        # PMX - remplir les parties restantes en respectant la correspondance
         for i in range(start, end):
             if parent2[i] not in child:
                 j = i
+                # Trouver la bonne position dans parent2
                 while parent1[j] in child:
                     j = parent2.index(parent1[j])
                 child[j] = parent2[i]
+
         for i in range(len(child)):
             if child[i] == -1:
                 child[i] = parent2[i]
+
+        child = self.remove_duplicates(child, parent1)
+
         return child
+
     
     def mutation(self, child):
         if random.random() < self.mutation_rate:
             i, j = random.sample(range(len(child)), 2)
             child[i], child[j] = child[j], child[i]
         return child
-    #representation graphique   
+
+    def genetic_algorithm(self, cities):
+        self.initiate_population(cities)
+        if len(self.population) < self.population_size:
+            raise ValueError(f"Population trop petite après initialisation: {len(self.population)}")
+
+        mutation_interval = 10  # Nombre de générations avant de muter 
+        for generation in range(self.generations):
+            new_population = []
+            fitnesses = [self.fitness(way, cities) for way in self.population]
+            
+            if len(fitnesses) < self.population_size:
+                raise ValueError(f"Le nombre de fitnesses ({len(fitnesses)}) est inférieur à la taille de la population ({self.population_size})") 
+            
+            while len(new_population) < self.population_size:
+                parent1, parent2 = self.selection_type_selection(self.population, fitnesses)
+
+                child1 = self.crossover(parent1, parent2)
+                child2 = self.crossover(parent2, parent1)
+
+                # Appliquer la mutation toutes les "mutation_interval" générations
+                if mutation_interval > 0 and generation % mutation_interval == 0:
+                    child1 = self.mutation(child1)
+                    child2 = self.mutation(child2)
+
+                new_population.append(child1)
+                if len(new_population) < self.population_size:
+                    new_population.append(child2)
+
+            if len(new_population) != self.population_size:
+                raise ValueError(f"Nouvelle population trop petite après la génération {generation}: {len(new_population)}")
+
+            # On remplace l'ancienne population par la nouvelle
+            self.population = new_population
+
+            # On retourne le meilleur chemin
+            best_way = max(self.population, key=lambda x: self.fitness(x, cities))
+
+        return best_way
+    def remove_duplicates(self,child, parent):
+        missing = [city for city in parent if city not in child]
+        seen = set()
+        duplicates = [i for i, city in enumerate(child) if city in seen or seen.add(city)]
+
+        for i in duplicates:
+            child[i] = missing.pop(0)  
+
+        return child
+
+
+   
