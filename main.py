@@ -6,6 +6,8 @@ import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 from math import radians, sin, cos, sqrt, atan2
 from christofides import christofides
+import pstats
+import cProfile
 
 """
 Fonction de Haversine pour calculer la distance de Haversine entre deux points en kilomètre.
@@ -106,6 +108,9 @@ def afficher_carte_christofides(df, villes, chemin):
     plt.text(lon_mid, lat_mid, f'{distance:.0f} km', color='black', fontsize=6, ha='center', transform=ccrs.PlateCarree())
 
     plt.title(f"Chemin trouvé par l'algorithme de Christofides\nDistance totale: {total_distance:.2f} km")
+    print(f"Meilleur chemin trouvé par l'algorithme de Christofides: {chemin}")
+    print(f"Distance totale: {total_distance:.2f} km")
+    print()
     plt.show()
     
 def afficher_carte_genetic(df, villes, chemin):
@@ -154,23 +159,55 @@ afficher_carte_villes(df)
 # On crée le dictionnaire des villes avec les coordonnées 
 villes = {row['Ville']: (row['Longitude'], row['Latitude']) for _, row in df.iterrows()}
 
+# Create a cProfile object for Christofides algorithm
+profiler_christofides = cProfile.Profile()
+
+# Start profiling Christofides algorithm
+profiler_christofides.enable()
+
 # On applique l'algorithme de Christofides
 chemin = christofides(villes)
 
+# Stop profiling Christofides algorithm
+profiler_christofides.disable()
+
+# Export profiling results to a text file for Christofides algorithm
+with open('./Docs/Profiling/Christofides_result.txt', 'w') as f:
+    stats = pstats.Stats(profiler_christofides, stream=f)
+    stats.print_stats()
+
 # On affiche la seconde carte avec le chemin optimisé
 afficher_carte_christofides(df, villes, chemin)
-df = pd.read_csv('Docs/villes_france_lat_long.csv', sep=',').head(20)
+# df = pd.read_csv('Docs/villes_france_lat_long.csv', sep=',').head(20)
 
+# Create a cProfile object
+profiler_genetics = cProfile.Profile()
+
+# Start profiling
+profiler_genetics.enable()
+
+# Code to be profiled
 algorithme = AlgorithmeGenetiqueTSP(
     population_size=100,        
-    selection_type='roulette_wheel', # Type de sélection ('roulette_wheel', 'tournament', etc.)
-    reproduction_type='pmx',    # Type de croisement ('order' ou 'pmx')
-    mutation_rate=0.02,         
+    selection_type='tournament', # Type de sélection ('roulette_wheel', 'tournament', etc.)
+    reproduction_type='order',    # Type de croisement ('order' ou 'pmx')
+    mutation_rate=0.05,         
     generations=100          
 )
-meilleur_chemin = algorithme.genetic_algorithm(df)
+distances_precalc = algorithme.precalculate_distances(df)
+
+meilleur_chemin = algorithme.genetic_algorithm(df, distances_precalc)
 print("Meilleur chemin trouvé :", meilleur_chemin)
-print("Distance totale :", algorithme.calculer_distance(meilleur_chemin, df))
+print("Distance totale :", algorithme.calculate_distance(meilleur_chemin, distances_precalc))
+print()
 
 # Afficher la carte avec le meilleur chemin trouvé par l'algorithme génétique
 afficher_carte_genetic(df, villes, meilleur_chemin)
+
+# Stop profiling
+profiler_genetics.disable()
+
+# Export profiling results to a text file
+with open('./Docs/Profiling/Genetics_result.txt', 'w') as f:
+    stats = pstats.Stats(profiler_genetics, stream=f)
+    stats.print_stats()

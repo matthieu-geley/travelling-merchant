@@ -1,0 +1,244 @@
+         25700 function calls (25566 primitive calls) in 0.041 seconds
+
+   Random listing order was used
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       39    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\re\__init__.py:280(_compile)
+       14    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\functools.py:979(__get__)
+       56    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\enum.py:1116(__new__)
+       56    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\enum.py:713(__call__)
+       39    0.000    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\re\__init__.py:179(sub)
+       21    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:3015(__init__)
+       11    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:175(get_annotations)
+       56    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:2729(__init__)
+       11    0.000    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:2368(_signature_from_function)
+    21/11    0.000    0.000    0.002    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:2463(_signature_from_callable)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:2500(<lambda>)
+       10    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:3083(replace)
+       10    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:747(unwrap)
+       22    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:371(isfunction)
+       11    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:767(_is_wrapper)
+      247    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:2782(name)
+       33    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:2786(default)
+      142    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:2794(kind)
+       31    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:3075(parameters)
+    21/11    0.000    0.000    0.002    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:3067(from_callable)
+       47    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:3062(<genexpr>)
+    21/11    0.000    0.000    0.002    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\inspect.py:3325(signature)
+     10/5    0.000    0.000    0.030    0.006 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\backends.py:627(__call__)
+        1    0.000    0.000    0.002    0.002 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\convert.py:365(from_dict_of_dicts)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graphviews.py:135(subgraph_view)
+        1    0.005    0.005    0.013    0.013 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:321(max_weight_matching)
+    17/11    0.000    0.000    0.005    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:922(assemble)
+       72    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:426(__call__)
+       51    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:593(__getitem__)
+       26    0.000    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\euler.py:133(_multigraph_eulerian_circuit)
+        2    0.000    0.000    0.003    0.001 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:309(__init__)
+       75    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:430(add_edge)
+       10    0.000    0.000    0.002    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\backends.py:590(__signature__)
+       11    0.000    0.000    0.003    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:1064(signature)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:1267(inner_f)
+        1    0.000    0.000    0.001    0.001 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:1022(copy)
+       11    0.000    0.000    0.009    0.001 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:874(compile)
+      190    0.001    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:899(add_edge)
+       25    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:623(remove_edge)
+        7    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:1013(get_name)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:679(_recurse)
+       26    0.000    0.000    0.004    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\euler.py:157(eulerian_circuit)
+    58/50    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:516(assignLabel)
+       25    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:907(__init__)
+        4    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:566(add_nodes_from)
+        3    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:762(__init__)
+        6    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:854(augmentMatching)
+        2    0.001    0.000    0.006    0.003 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:968(add_edges_from)
+        2    0.000    0.000    0.001    0.001 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:526(add_edges_from)
+       21    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:608(__iter__)
+        1    0.000    0.000    0.003    0.003 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\convert.py:34(to_networkx_graph)
+        6    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:795(_recurse)
+        4    0.000    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:578(addBlossom)
+       20    0.002    0.000    0.003    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\tree\mst.py:142(kruskal_mst_edges)
+        1    0.000    0.000    0.041    0.041 c:\Users\x_mat\Documents\GitHub\travelling-merchant\christofides.py:33(christofides)
+    80/51    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:1170(_flatten)
+       11    0.000    0.000    0.009    0.001 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:720(_lazy_compile)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:251(_nodes_or_number)
+       39    0.000    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:854(_name)
+       51    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:1200(_indent)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\union_find.py:31(__init__)
+       11    0.000    0.000    0.000    0.000 <string>:1(<lambda>)
+       38    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\union_find.py:96(<lambda>)
+        6    0.000    0.000    0.003    0.001 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:332(__init__)
+        6    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:88(_not_implemented_for)
+        3    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:419(__init__)
+       27    0.000    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\misc.py:146(arbitrary_element)
+      300    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\misc.py:595(_clear_cache)
+       50    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:831(_count)
+     11/5    0.000    0.000    0.036    0.007 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:788(func)
+       24    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\decorators.py:1058(<genexpr>)
+        1    0.000    0.000    0.002    0.002 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:1049(add_weighted_edges_from)
+       43    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\backends.py:599(<genexpr>)
+      418    0.000    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\union_find.py:46(__getitem__)
+       19    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\utils\union_find.py:91(union)
+       36    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:286(__iter__)
+        3    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:329(__iter__)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\function.py:172(freeze)
+       20    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:520(__getitem__)
+       51    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:1104(<genexpr>)
+      392    0.001    0.000    0.003    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:847(__iter__)
+       13    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:2023(bunch_iter)
+       73    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:1318(neighbors)
+      276    0.000    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:295(__getitem__)
+        6    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:401(new_edge_key)
+        7    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:59(__set__)
+        7    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:37(__set__)
+       26    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:455(__contains__)
+       26    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:1977(nbunch_iter)
+        6    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:1558(is_multigraph)
+        4    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:1562(is_directed)
+      432    0.001    0.000    0.002    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:293(<genexpr>)
+       39    0.001    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:336(<genexpr>)
+      948    0.001    0.000    0.002    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:341(new_node_ok)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:1522(clear)
+        3    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:1361(edges)
+     1394    0.001    0.000    0.003    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:491(__getitem__)
+        2    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:974(degree)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:1484(degree)
+        3    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:738(nodes)
+     1493    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:43(__init__)
+     1432    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:52(__getitem__)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:821(edges)
+       37    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:279(__init__)
+      144    0.000    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:284(<genexpr>)
+        2    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:375(adj)
+        3    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:437(__iter__)
+        3    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:469(__len__)
+       22    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:49(__iter__)
+       12    0.000    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:283(__len__)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:321(__init__)
+        3    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:178(__init__)
+       18    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:185(__iter__)
+      132    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:781(<lambda>)
+        2    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:372(adj)
+       67    0.000    0.000    0.002    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:1097(<genexpr>)
+       16    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:205(__call__)
+     1414    0.002    0.000    0.002    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:80(__getitem__)
+       75    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:102(__getitem__)
+       85    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:597(<genexpr>)
+       64    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:613(<genexpr>)
+       25    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:916(<lambda>)
+        3    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:1093(__call__)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\graph.py:1768(subgraph)
+       40    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:188(__getitem__)
+       50    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:979(__iter__)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\components\connected.py:198(_plain_bfs)
+       36    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\coreviews.py:338(__getitem__)
+        4    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:1058(__init__)
+      256    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:776(<lambda>)
+       25    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:928(<lambda>)
+        2    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:1014(is_multigraph)
+        5    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:1018(is_directed)
+      660    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\filters.py:20(no_filter)
+       21    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\multigraph.py:1103(<genexpr>)
+       13    0.000    0.000    0.003    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:1262(<genexpr>)
+        1    0.000    0.000    0.003    0.003 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:1261(__len__)
+       25    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\reportviews.py:1362(__call__)
+     1044    0.001    0.000    0.001    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\filters.py:62(__call__)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\generators\classic.py:552(empty_graph)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\classes\filters.py:59(__init__)
+        1    0.000    0.000    0.022    0.022 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:260(min_weight_matching)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\components\connected.py:111(is_connected)
+       24    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:418(leaves)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:673(expandBlossom)
+        1    0.000    0.000    0.005    0.005 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\tree\mst.py:559(minimum_spanning_tree)
+        2    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:789(augmentBlossom)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:60(matching_dict_to_set)
+       21    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\components\connected.py:154(<genexpr>)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:397(NoNode)
+       21    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\euler.py:69(<genexpr>)
+       67    0.000    0.000    0.002    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:316(<genexpr>)
+       10    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:541(scanBlossom)
+     1319    0.002    0.000    0.006    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:511(slack)
+        1    0.000    0.000    0.001    0.001 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\euler.py:20(is_eulerian)
+       67    0.000    0.000    0.002    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:314(<genexpr>)
+        1    0.000    0.000    0.000    0.000 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\matching.py:400(Blossom)
+        1    0.000    0.000    0.001    0.001 C:\Users\x_mat\AppData\Local\Programs\Python\Python312\Lib\site-packages\networkx\algorithms\tree\mst.py:370(minimum_spanning_edges)
+      190    0.000    0.000    0.000    0.000 c:\Users\x_mat\Documents\GitHub\travelling-merchant\christofides.py:10(calcul_distance)
+        1    0.000    0.000    0.002    0.002 c:\Users\x_mat\Documents\GitHub\travelling-merchant\christofides.py:16(create_complete_graph)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 13:1(argmap_kruskal_mst_edges_10)
+        1    0.000    0.000    0.005    0.005 <class 'networkx.utils.decorators.argmap'> compilation 4:1(argmap_minimum_spanning_tree_1)
+        1    0.000    0.000    0.001    0.001 <class 'networkx.utils.decorators.argmap'> compilation 9:1(argmap_minimum_spanning_edges_5)
+        1    0.000    0.000    0.001    0.001 <class 'networkx.utils.decorators.argmap'> compilation 33:1(argmap_empty_graph_30)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 41:1(argmap_eulerian_circuit_38)
+        1    0.000    0.000    0.002    0.002 <class 'networkx.utils.decorators.argmap'> compilation 29:1(argmap_from_dict_of_dicts_26)
+        1    0.000    0.000    0.022    0.022 <class 'networkx.utils.decorators.argmap'> compilation 19:1(argmap_min_weight_matching_14)
+        1    0.000    0.000    0.013    0.013 <class 'networkx.utils.decorators.argmap'> compilation 25:1(argmap_max_weight_matching_20)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 50:1(argmap_is_connected_46)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 37:1(argmap_empty_graph_34)
+        1    0.000    0.000    0.001    0.001 <class 'networkx.utils.decorators.argmap'> compilation 45:1(argmap_is_eulerian_42)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 29:1(<module>)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 41:1(<module>)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 13:1(<module>)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 33:1(<module>)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 45:1(<module>)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 25:1(<module>)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 37:1(<module>)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 9:1(<module>)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 4:1(<module>)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 19:1(<module>)
+        1    0.000    0.000    0.000    0.000 <class 'networkx.utils.decorators.argmap'> compilation 50:1(<module>)
+        2    0.000    0.000    0.000    0.000 <frozen _collections_abc>:388(__subclasshook__)
+       50    0.000    0.000    0.000    0.000 <frozen _collections_abc>:845(__init__)
+       12    0.000    0.000    0.000    0.000 <frozen _collections_abc>:811(__contains__)
+        4    0.000    0.000    0.000    0.000 <frozen _collections_abc>:104(_check_methods)
+      448    0.001    0.000    0.005    0.000 <frozen _collections_abc>:892(__iter__)
+       50    0.000    0.000    0.000    0.000 <frozen _collections_abc>:823(items)
+       10    0.000    0.000    0.000    0.000 <frozen _collections_abc>:309(__subclasshook__)
+     12/2    0.000    0.000    0.000    0.000 <frozen abc>:121(__subclasscheck__)
+       27    0.000    0.000    0.000    0.000 <frozen abc>:117(__instancecheck__)
+       11    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x00007FFEAF9B98B0}
+       27    0.000    0.000    0.000    0.000 {built-in method _abc._abc_instancecheck}
+     12/2    0.000    0.000    0.000    0.000 {built-in method _abc._abc_subclasscheck}
+       39    0.000    0.000    0.000    0.000 {method 'sub' of 're.Pattern' objects}
+      190    0.000    0.000    0.000    0.000 {built-in method math.isnan}
+      190    0.000    0.000    0.000    0.000 {built-in method math.sqrt}
+       31    0.000    0.000    0.000    0.000 {method 'values' of 'mappingproxy' objects}
+     4723    0.002    0.000    0.002    0.000 {method 'get' of 'dict' objects}
+       42    0.000    0.000    0.000    0.000 {method 'pop' of 'dict' objects}
+        6    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+      152    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+       87    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
+      773    0.001    0.000    0.001    0.000 {method 'update' of 'dict' objects}
+       25    0.000    0.000    0.000    0.000 {built-in method fromkeys}
+       31    0.000    0.000    0.000    0.000 {method 'clear' of 'dict' objects}
+      110    0.000    0.000    0.000    0.000 {method 'copy' of 'dict' objects}
+      942    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+       21    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+      115    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
+        5    0.000    0.000    0.000    0.000 {method 'index' of 'list' objects}
+        8    0.000    0.000    0.000    0.000 {method 'reverse' of 'list' objects}
+       56    0.000    0.000    0.000    0.000 {method '__contains__' of 'frozenset' objects}
+      112    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+       33    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+       56    0.000    0.000    0.000    0.000 {method 'isidentifier' of 'str' objects}
+       11    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.__build_class__}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.all}
+       10    0.000    0.000    0.000    0.000 {built-in method builtins.any}
+       32    0.000    0.000    0.000    0.000 {built-in method builtins.callable}
+       11    0.003    0.000    0.003    0.000 {built-in method builtins.compile}
+       11    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
+      333    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+       81    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+      100    0.000    0.000    0.000    0.000 {built-in method builtins.id}
+      508    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+  187/185    0.000    0.000    0.000    0.000 {built-in method builtins.iter}
+  320/304    0.000    0.000    0.003    0.000 {built-in method builtins.len}
+        2    0.000    0.000    0.002    0.001 {built-in method builtins.max}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+       46    0.000    0.000    0.000    0.000 {built-in method builtins.next}
+       20    0.000    0.000    0.000    0.000 {built-in method builtins.sorted}
+    85/73    0.000    0.000    0.004    0.000 {built-in method builtins.sum}
+       10    0.000    0.000    0.000    0.000 {built-in method sys.getrecursionlimit}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
